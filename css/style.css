@@ -1,64 +1,60 @@
-
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* Global layout */
 body {
   font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.7;
   background-color: #f7f5f2;
   color: #2e2e2e;
+  line-height: 1.7;
+
+  /* THIS is what centers everything */
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-
-a {
-  color: #8b5e3c;
-  text-decoration: none;
+/* Make sure all main content behaves consistently */
+main {
+  margin-top: 20px;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-
+/* Header */
 header {
+  text-align: center;
   margin-bottom: 40px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
 }
 
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
 nav a {
-  margin-right: 15px;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #8b5e3c;
+  font-size: 0.9rem;
   text-transform: uppercase;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
 
+/* Headings */
 h1, h2, h3 {
   font-weight: normal;
   margin-bottom: 15px;
-  color: #1f1f1f;
-}
-
-h1 {
-  font-size: 2.2rem;
 }
 
 h2 {
-  font-size: 1.6rem;
   margin-top: 30px;
-}
-
-h3 {
-  font-size: 1.2rem;
-  margin-top: 20px;
 }
 
 /* Paragraphs */
@@ -67,7 +63,9 @@ p {
   font-size: 1.05rem;
 }
 
-/* Post list (for index page) */
+/* =========================
+   INDEX PAGE (post list)
+========================= */
 .post-preview {
   margin-bottom: 30px;
 }
@@ -79,20 +77,34 @@ p {
 .post-date {
   font-size: 0.85rem;
   color: #777;
+}
+
+/* =========================
+   POST PAGE (post1.html)
+========================= */
+.post {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.post-title {
+  text-align: center;
   margin-bottom: 10px;
 }
 
-
-article {
-  margin-top: 20px;
+.post-meta {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 25px;
 }
 
-article img {
+.post img {
   max-width: 100%;
   margin: 20px 0;
 }
 
-/* Blockquotes (nice for book quotes) */
+/* Nice quotes for book blog */
 blockquote {
   border-left: 3px solid #8b5e3c;
   padding-left: 15px;
@@ -101,22 +113,36 @@ blockquote {
   color: #555;
 }
 
-footer {
-  margin-top: 50px;
-  padding-top: 15px;
-  border-top: 1px solid #ddd;
-  font-size: 0.85rem;
-  color: #777;
+/* =========================
+   ABOUT PAGE
+========================= */
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center; /* THIS fixes your issue */
+}
+
+.about p {
   text-align: center;
 }
 
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.85rem;
+  color: #777;
+}
 
+/* Responsive */
 @media (max-width: 600px) {
   body {
     padding: 15px;
   }
 
-  h1 {
+  header h1 {
     font-size: 1.8rem;
   }
 }
