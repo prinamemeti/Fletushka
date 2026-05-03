@@ -12,13 +12,11 @@ body {
   color: #2e2e2e;
   line-height: 1.7;
 
-  /* THIS is what centers everything */
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Make sure all main content behaves consistently */
 main {
   margin-top: 20px;
 }
@@ -47,7 +45,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Headings */
 h1, h2, h3 {
   font-weight: normal;
   margin-bottom: 15px;
@@ -57,7 +54,6 @@ h2 {
   margin-top: 30px;
 }
 
-/* Paragraphs */
 p {
   margin-bottom: 18px;
   font-size: 1.05rem;
@@ -104,7 +100,7 @@ p {
   margin: 20px 0;
 }
 
-/* Nice quotes for book blog */
+
 blockquote {
   border-left: 3px solid #8b5e3c;
   padding-left: 15px;
@@ -119,7 +115,11 @@ blockquote {
 .about {
   max-width: 700px;
   margin: 0 auto;
-  text-align: center; /* THIS fixes your issue */
+  text-align: center;
+}
+
+.about h {
+  color: #8b5e3c;
 }
 
 .about p {
